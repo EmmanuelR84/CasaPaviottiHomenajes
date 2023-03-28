@@ -1,0 +1,196 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Playfair Display", serif;
+}
+
+.inactive {
+  display: none;
+}
+
+body {
+  background-image: url(../img/img6.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+:root {
+  --sm: .8em;
+  --md: 1.8em;
+  --lg: 2.3em;
+
+  --col-white: #ffffff;
+  --col-black: #000000;
+  --col-grey: #978f8f;
+  --first-col: #2c72be;
+  --second-col: #a26c1f;
+  --third-col: #b3c6db;
+  --four-col: #28acff;
+}
+
+.contenedor {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  height: 75vh;
+  margin: 4rem auto;
+}
+
+.contenedor__fallecido {
+  display: flex;
+  flex-direction: column;
+  width: 40vw;
+}
+
+.contenedor__homenaje {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  padding: 1rem;
+  width: 68%;
+  background-color: var(--col-white);
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px 5px var(--col-black);
+}
+
+#fimagen {
+  margin-top: -5rem;
+  width: 8rem;
+  height: auto;
+  border: 5px solid var(--col-grey);
+  border-radius: 50%;
+  box-shadow: 5px 5px 35px 3px var(--col-black);
+}
+
+#fNombre {
+  margin-top: 1rem;
+  color: var(--col-black);
+  font-weight: bold;
+  font-size: var(--md);
+  text-shadow: 2px 2px 5px var(--col-grey);
+}
+
+#finfo {
+  margin-top: 1rem;
+  color: var(--col-black);
+  font-weight: bold;
+  font-size: 1em;
+  text-shadow: 2px 2px 5px var(--col-grey);
+}
+
+hr {
+  width: 80%;
+  height: 2px;
+  margin: .5rem 0;
+  background-color: var(--col-black);
+}
+
+#lInhumacion,
+#fInhumacion {
+  font-size: var(--sm);
+}
+
+.contenedor__frase {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 46%;
+  margin-right: 3.5rem;
+  padding: 1rem;
+  font-size: 1.4em;
+  border-radius: 7px;
+  box-shadow: 5px 5px 15px 5px var(--col-black);
+  background-color: var(--col-white);
+}
+
+#logoPaviotti {
+  width: 10rem;
+  margin-bottom: 2rem;
+}
+
+.infoExtra {
+  display: inline;
+  margin-bottom: 2rem;
+  width: 60%;
+  padding: .7rem;
+  border-radius: 15px;
+  background: #e1dcdc;
+  box-shadow:  19px 19px 28px #807d7d, -9px -9px 28px #ffffff;
+}
+
+.contanedor__infoExtra {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: .1rem auto;
+  width: 75%;
+  height: 20%;
+  box-shadow: 5px 5px 15px 3px var(--col-black);
+  border-radius: 10px;
+  background-color: var(--col-white);
+}
+
+#fraseHomenaje {
+  font-family: 'Times New Roman', Times, serif;
+  width: 60%;
+  color: var(--col-black);
+  font-size: var(--sm);
+  font-weight: bold;
+  text-shadow: 2px 2px 5px var(--col-grey);
+}
+
+/*LISTA DE ESTILOS*/
+
+.contenedor__estilos {
+  position: absolute;
+  top: 1rem;
+  width: 3rem;
+  background-color: rgba(128, 64, 0, .8);
+  border-radius: 0 10px 10px 0;
+}
+
+.contenedor__estilos--li {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  list-style: none;
+  text-align: center;
+  font-size: var(--md);
+  align-items: center;
+  margin: 1rem 0;
+  cursor: pointer;
+}
+
+.iconConf {
+  width: 16px;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  cursor: pointer;
+}
+
+.iconClose {
+  width: 32px;
+}
+
+.iconQr {
+  width: 15%;
+}
+
+.iconReligion {
+  width: 32px;
+  position: absolute;
+  left: 28%;
+  padding: .3rem;
+  border-radius: 49%;
+  background-color: #cccccc;
+  box-shadow: 2px 2px 15px 5px var(--col-grey);
+}
+
+.iconConf:hover {
+  transform: rotate(360deg);
+  transition: 3s;
+}
