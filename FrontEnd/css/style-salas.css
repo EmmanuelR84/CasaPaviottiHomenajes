@@ -12,19 +12,14 @@
     --four-col: #28acff;
 }
 
-body {
-    background-image: none;
-}
-
-main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: space-between;
+.screenSala {
+    position: absolute;
+    background: #ffffff;
+    height: 100vh;
 }
 
 section {
-    margin-top: 8rem;
+    margin-top: 5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -37,9 +32,9 @@ section {
     justify-content: center;
     align-items: center;
     width: 72vw;
-    height: 8.5rem;
+    height: 5.5rem;
     color: var(--col-black);
-    font-size: var(--md);
+    font-size: 1.3em;
     font-weight: bold;
     letter-spacing: 1em;
     border-radius: 15px;
@@ -63,23 +58,28 @@ section {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    min-width: 70vw;
-    height: 8rem;
+    min-width: 81vw;
+    height: 4rem;
     font-size: .6em;
     border-radius: 17px;
     background: var(--first-col);
-    box-shadow:  -11px -11px 22px #788593, 11px 11px 22px #eeffff;
+    box-shadow: -11px -11px 22px #788593, 11px 11px 22px #eeffff;
     margin-bottom: 2rem;
-    padding: .5rem 2rem;
+    padding: 0.5rem 2rem;
 }
 
 .contenedor__salaVelatoria:first-child {
-    margin-top: 6.5rem;
+    margin-top: 3.5rem;
 }
 
 .imgFallecido {
-	width: 5rem;
+	min-width: 5rem;
+    max-width: 5rem;
+    min-height: 5rem;
+    max-height: 5rem;
     border-radius: 50%;
+    object-fit: contain;
+    background-color: var(--col-white);
 }
 
 .nombreFallecido {
@@ -93,7 +93,7 @@ section {
     justify-content: center;
     text-align: center;
     width: 10.5rem;
-    height: 5.5rem;
+    height: 4.5rem;
     background: #b3c6db;
     border-radius: 15%;
     box-shadow: inset 9.91px 9.91px 15px #C6DBF2, inset -9.91px -9.91px 15px #A0B1C4;
@@ -109,5 +109,5 @@ section {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 11rem;
+    height: 8rem;
 }

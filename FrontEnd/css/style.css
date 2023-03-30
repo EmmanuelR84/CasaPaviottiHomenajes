@@ -28,6 +28,10 @@ body {
   --four-col: #28acff;
 }
 
+main {
+  position: relative;
+}
+
 .contenedor {
   display: flex;
   flex-direction: row;
@@ -40,7 +44,7 @@ body {
 .contenedor__fallecido {
   display: flex;
   flex-direction: column;
-  width: 40vw;
+  width: 50vw;
 }
 
 .contenedor__homenaje {
@@ -50,6 +54,7 @@ body {
   margin: auto;
   padding: 1rem;
   width: 68%;
+  min-height: 17em;
   background-color: var(--col-white);
   border-radius: 10px;
   box-shadow: 5px 5px 15px 5px var(--col-black);
@@ -57,18 +62,22 @@ body {
 
 #fimagen {
   margin-top: -5rem;
-  width: 8rem;
-  height: auto;
+  min-width: 8rem;
+  max-width: 8rem;
+  min-height: 8rem;
+  max-height: 8rem;
   border: 5px solid var(--col-grey);
   border-radius: 50%;
   box-shadow: 5px 5px 35px 3px var(--col-black);
+  object-fit: contain;
+  background: none;
 }
 
 #fNombre {
   margin-top: 1rem;
   color: var(--col-black);
   font-weight: bold;
-  font-size: var(--md);
+  font-size: 1.2em;
   text-shadow: 2px 2px 5px var(--col-grey);
 }
 
@@ -127,7 +136,8 @@ hr {
   justify-content: space-evenly;
   margin: .1rem auto;
   width: 75%;
-  height: 20%;
+  min-width: 160px;
+  height: 27%;
   box-shadow: 5px 5px 15px 3px var(--col-black);
   border-radius: 10px;
   background-color: var(--col-white);

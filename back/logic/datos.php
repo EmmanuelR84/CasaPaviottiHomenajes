@@ -4,16 +4,19 @@ include_once '../db/conexion.php';
 $objeto = new Conexion();
 $conexion = $objeto->Conectar();
 
+//date_default_timezone_set('America/Argentina/Cordoba'); 
+//$fechaNow = date("Y-m-d H:i:s");
 $opcion = (isset($_POST['opcion'])) ? $_POST['opcion'] : '';
-$cod = (isset($_POST['cod'])) ? $_POST['cod'] : '';
 
 
 switch($opcion){
     case 1:
-        $consulta = "SELECT *   FROM extintosH 
-                            WHERE  curdate() BETWEEN STR_TO_DATE(substring(REPLACE(fechafal,'/',','), locate(' ', fechafal))  ,'%d,%m,%Y') AND 
-                                                        STR_TO_DATE(substring(REPLACE(fechasep,'/',','), locate(' ', fechasep))  ,'%d,%m,%Y')	
-                            ORDER BY COD_EXTINTO";
+        $consulta = "SELECT *   FROM extintos
+                    WHERE  (sala LIKE 'Sala DALI%' or sala='Sala VAN GOGH'   or sala='Sala PICASSO') AND
+                        curdate() BETWEEN STR_TO_DATE(substring(REPLACE(fechafal,'/',','), locate(' ', fechafal))  ,'%d,%m,%Y') 
+                    AND 
+                        STR_TO_DATE(substring(REPLACE(fechasep,'/',','), locate(' ', fechasep))  ,'%d,%m,%Y')	
+                    ORDER BY COD_EXTINTO";
         $resultado = $conexion->prepare($consulta);
         $resultado->execute();        
         $data = $resultado->fetchAll(PDO::FETCH_ASSOC);
@@ -26,7 +29,7 @@ switch($opcion){
         $data=$resultado->fetchAll(PDO::FETCH_ASSOC);
         break;
     case 3:
-        $consulta ="SELECT * from condolencias WHERE COD_EXTINTO = '$cod' ";
+        $consulta ="";
         $resultado = $conexion->prepare($consulta);
         $resultado->execute();        
         $data=$resultado->fetchAll(PDO::FETCH_ASSOC);

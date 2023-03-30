@@ -1,48 +1,131 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400;1,500&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400;1,500&display=swap"
+      rel="stylesheet"
+    />
 
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" type="text/css" href="./css/style-salas.css" />
 
     <title>Homenaje Casa Paviotti</title>
-</head>
-<body>
+  </head>
+  <body>
     <main>
+
+      <div class="screenHomenaje" data-changeScreen1>
+
         <div class="contenedor">
-
-            <div class="contenedor__fallecido">
-                <div class="contenedor__homenaje">
-                    <img src="./img/pexels-andrea-piacquadio-3831612.jpg" alt="foto de persona" id="fimagen" data-imgFallecido>
-                    <img id="religionIcon" class="iconReligion" src="./img/cristiandad.png" alt="religion">
-                    <h1 id="fNombre" data-nombreFallecido>Nombre y Apellido</h1>
-                    <p id="finfo" data-infoFallecido>20/03/2023</p>
-                    <hr>
-                    <p id="lInhumacion" data-cementerio>Parque La Naturaleza</p>
-                    <p id="fInhumacion" data-inhumacionFH>21/03/2023 a las 17:00 hs.</p>
-                </div>
-
-                <div class="contanedor__infoExtra">
-                    <img src="./img/qr.png" alt="codigo qr" class="iconQr" data-qr>
-                    <p id="fraseHomenaje">Si desea acompañar a la familia con un caluroso mensaje escanee este codigo QR o ingrese a la web.</p>
-                </div>
+          <div class="contenedor__fallecido">
+            <div class="contenedor__homenaje">
+              <img
+                src="../autogestion/images/5515.jpg"
+                alt="foto de persona"
+                id="fimagen"
+                data-imgFallecido
+              />
+              <img
+                id="religionIcon"
+                class="iconReligion"
+                src="./img/cristiandad.png"
+                alt="religion"
+              />
+              <h1 id="fNombre" data-nombreFallecido>Nombre y Apellido</h1>
+              <p id="finfo" data-infoFallecido>20/03/2023</p>
+              <hr />
+              <p id="lInhumacion" data-cementerio>Parque La Naturaleza</p>
+              <p id="fInhumacion" data-inhumacionFH>
+                21/03/2023 a las 17:00 hs.
+              </p>
             </div>
-            
-            <div class="contenedor__frase">
-                <img id="logoPaviotti" src="./img/logo_paviotti.png" alt="logo paviotti">
-                <p class="infoExtra" data-mjsQR>"Sé que nos cuidas desde el cielo, te querremos siempre."</p>
-                <p class="infoExtra" data-mjsQR>"Hasta que nos volvamos a encontrar."</p>
-                <p class="infoExtra" data-mjsQR>"Aunque ya no estés con nosotros tu recuerdo permanecerá siempre."</p>
-                <p class="infoExtra" data-mjsQR>"Te queremos y siempre te recordaremos con amor."</p>
+
+            <div class="contanedor__infoExtra">
+              <div id="contenedorQR" class="contenedorQR"></div>
+              <!--<img src="./img/qr.png" alt="codigo qr" class="iconQr" data-qr>--->
+              <p id="fraseHomenaje">
+                Si desea acompañar a la familia con una frase, escanee
+                este codigo QR o ingrese a la web.
+              </p>
             </div>
-            
+          </div>
+
+          <div class="contenedor__frase">
+            <img
+              id="logoPaviotti"
+              src="./img/logo_paviotti.png"
+              alt="logo paviotti"
+            />
+            <p class="infoExtra" data-mjsQR>
+              "Sé que nos cuidas desde el cielo, te querremos siempre."
+            </p>
+          </div>
         </div>
 
+      </div>
+
+      <div class="screenSala inactive" data-changeScreen2>
+
+        <section>
+          <div class="contenedor__saludo">HOY HOMENAJEAMOS A</div>
+          <div class="contenedor__salas">
+            <div class="contenedor__salaVelatoria">
+              <img
+              id="imgDali"
+                class="imgFallecido"
+                src="../autogestion/images/5515.jpg"
+                alt="imagen de persona"
+                data-imgFallecidoDali
+              />
+              <p class="nombreFallecido" data-nombreFallecidoDali></p>
+              <div class="contenedor__sala" data-sala>
+                <p class="salaVelatoria" data-vangogh>DALI</p>
+              </div>
+            </div>
+
+            <div class="contenedor__salaVelatoria">
+              <img
+              id="imgPicasso"
+                class="imgFallecido"
+                src="../autogestion/images/5515.jpg"
+                alt="imagen de persona"
+                data-imgFallecidoPicasso
+              />
+              <p class="nombreFallecido" data-nombreFallecidoPicasso></p>
+              <div class="contenedor__sala" data-sala>
+                <p class="salaVelatoria" data-vangogh>PICASSO</p>
+              </div>
+            </div>
+
+            <div class="contenedor__salaVelatoria">
+              <img
+              id="imgVanGogh"
+                class="imgFallecido"
+                src="../autogestion/images/5515.jpg"
+                alt="imagen de persona"
+                data-imgFallecidoVanGogh
+              />
+              <p class="nombreFallecido" data-nombreFallecidoVanGogh></p>
+              <div class="contenedor__sala" data-sala>
+                <p class="salaVelatoria" data-vangogh>VAN GOGH</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="logo__footer">
+            <img src="./img/logo_paviotti.png" alt="logo empresa" />
+          </div>
+        </section>
+
+      </div>
+
     </main>
+
     <script src="../envio-condolencias/js/jquery.min.js"></script>
     <script src="../FrontEnd/js/funcion.js"></script>
-</body>
+    <script src="../FrontEnd/js/generadorQR.js"></script>
+  </body>
 </html>

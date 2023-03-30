@@ -6,32 +6,28 @@ function ValidarHash($hash,$cod){
       $conexion = $objeto->Conectar();
 
       if (strlen($hash) > 3 || strlen($cod) > 3) {
-            $consulta = "SELECT apellido,fechasep FROM `extintos` WHERE `COD_EXTINTO` = '$cod' ";
-            $resultado = $conexion->prepare($consulta);
-            $resultado->execute();
-            $row = $resultado->fetch();
-                      if (strlen($row["apellido"]) !== 0){
-                            //header('Location: https://paviotti.com.ar/');
-                            return $row["apellido"];
-                        }else{
-                          header('Location: https://paviotti.com.ar/');
-                      }
-              if($resultado->rowCount() != 1){
-                header('Location: https://paviotti.com.ar/');
-              }
+        $consulta = "SELECT apellido,fechasep FROM `extintos` WHERE `COD_EXTINTO` = '$cod' ";
+        $resultado = $conexion->prepare($consulta);
+        $resultado->execute();
+        $row = $resultado->fetch();
+                  if (strlen($row["apellido"]) !== 0){
+                        //header('Location: https://paviotti.com.ar/');
+                        return $row["apellido"];
+                    }else{
+                      header('Location: https://paviotti.com.ar/');
+                  }
+          if($resultado->rowCount() != 1){
+            header('Location: https://paviotti.com.ar/');
+          }
 
-      }else {
-          header('Location: https://paviotti.com.ar/');
-      }
+  }else {
+      header('Location: https://paviotti.com.ar/');
+  }
 }
 
-
 $hash = $_GET['condolencia'];
-$cod = substr($_GET['condolencia'],3);
-
+$cod = substr($_GET['condolencia'],0,-2);
 $apellido =  ValidarHash($hash,$cod);
-
-
 ?>
 
 <!DOCTYPE html>
