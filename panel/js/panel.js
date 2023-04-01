@@ -10,6 +10,7 @@ $(document).ready(function() {
         "columns":[
             {"data": "COD_EXTINTO"},
             {"data": "apellido"},
+            {"data": "edad"},
             {"data": "fechafal"},
             {"data": "fechasep"},
             {"data": "horasep"},
@@ -22,7 +23,7 @@ $(document).ready(function() {
               "render": function (data) {
               return '<img src="../autogestion/images/'+data+' " width="45px">';}
             },
-            {"defaultContent": "<div class='text-center'><div class='btn-group'><button class='btn btn-primary  btn-sm agregar1' title='Editar'><i class='fas fa-edit'></i></button><button class='btn btn-warning btn-sm btnSolicitud' title='Imprimir Solicitud'><i class='fas fa-print'></i></button><button class='btn btn-danger btn-sm btnBorrar' title='Eliminar'><span class='material-symbols-outlined'>cancel</span></button></div></div>"}
+            {"defaultContent": "<div class='text-center'><div class='btn-group'><button class='btn btn-primary  btn-sm agregar1' title='Editar'><i class='fas fa-edit'></i></button><button class='btn btn-warning btn-sm btnSolicitud' id='qrBtn' title='Compartit Link'><i class='fas fa-print'></i></button><button class='btn btn-danger btn-sm btnBorrar' title='Eliminar'><span class='material-symbols-outlined'>cancel</span></button></div></div>"}
         ],
         'rowCallback': function(row, data) {
             //$(row).find('td:eq(10)').html("<img src="+data.foto+" >");
@@ -74,6 +75,13 @@ $(document).ready(function() {
                 className: 'btn btn-info'
             },
         ]
-    });     
+    });    
+    
+    
+    $(document).on('click','#qrBtn',function () {
+        fila = $(this).closest("tr");
+        id = parseInt(fila.find('td:eq(0)').text()); //capturo el ID
+        alert(id)
+    })
     
 });

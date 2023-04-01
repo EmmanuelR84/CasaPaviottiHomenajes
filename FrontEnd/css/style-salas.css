@@ -99,7 +99,15 @@ section {
     box-shadow: inset 9.91px 9.91px 15px #C6DBF2, inset -9.91px -9.91px 15px #A0B1C4;
 }
 
-.salaVelatoria {
+.salaVelatoria0 {
+    font-size: var(--lg);
+    font-weight: bold;
+}
+.salaVelatoria1 {
+    font-size: var(--lg);
+    font-weight: bold;
+}
+.salaVelatoria2 {
     font-size: var(--lg);
     font-weight: bold;
 }

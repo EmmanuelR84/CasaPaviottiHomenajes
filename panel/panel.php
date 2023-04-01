@@ -32,6 +32,7 @@ session_start();
                         <tr>
                             <th>#</th>
                             <th>Fallecido</th>
+                            <th>edad</th>
                             <th>Fecha Fallecimiento</th>
                             <th>Fecha Sepelio</th>
                             <th>Hora Sepelio</th>
