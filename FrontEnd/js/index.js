@@ -1,32 +1,31 @@
-const iconConfig = document.querySelector('.iconConf');
-const divEstilos = document.querySelector('.contenedor__estilos');
+const iconConfig = document.querySelector(".iconConf");
+const divEstilos = document.querySelector(".contenedor__estilos");
 // const estilos = document.querySelector('#estilos');
 // const estilo1 = document.querySelector('#estilo1');
 // const estilo2 = document.querySelector('#estilo2');
 // const estilo3 = document.querySelector('#estilo3');
 // const estilo4 = document.querySelector('#estilo4');
 // const estilo5 = document.querySelector('#estilo5');
-const fImagen = document.querySelector('[data-imgFallecido]');
-const fNombre = document.querySelector('[data-nombreFallecido]');
-const fInfo = document.querySelector('[data-infoFallecido]');
-const fInhumacion = document.querySelector('[data-inhumacion]');
-const fInhuFechaHora = document.querySelector('[data-inhumacionFH]');
-const contenedorInfoExtra = document.querySelector('.contenedor__infoExtra');
-const codigoQR = document.querySelector('[data-qr]');
-const infoExtra = document.querySelector('[data-mjsQR]');
-const fraseHomenaje = document.querySelector('#fraseHomenaje');
-const body = document.querySelector('body');
+const fImagen = document.querySelector("[data-imgFallecido]");
+const fNombre = document.querySelector("[data-nombreFallecido]");
+const fInfo = document.querySelector("[data-infoFallecido]");
+const fInhumacion = document.querySelector("[data-inhumacion]");
+const fInhuFechaHora = document.querySelector("[data-inhumacionFH]");
+const contenedorInfoExtra = document.querySelector(".contenedor__infoExtra");
+const codigoQR = document.querySelector("[data-qr]");
+const infoExtra = document.querySelector("[data-mjsQR]");
+const fraseHomenaje = document.querySelector("#fraseHomenaje");
+const body = document.querySelector("body");
 
 //PANTALLA SALAS VELATORIAS
-const imgDali = document.querySelector('[data-imgFallecidoDali]');
-const nombreDali = document.querySelector('[data-nombreFallecidoDali]');
+const imgDali = document.querySelector("[data-imgFallecidoDali]");
+const nombreDali = document.querySelector("[data-nombreFallecidoDali]");
 
-const imgPicasso = document.querySelector('[data-imgFallecidoPicasso]');
-const nombrePicasso = document.querySelector('[data-nombreFallecidoPicasso]');
+const imgPicasso = document.querySelector("[data-imgFallecidoPicasso]");
+const nombrePicasso = document.querySelector("[data-nombreFallecidoPicasso]");
 
-const imgVanGogh = document.querySelector('[data-imgFallecidoVanGogh]');
-const nombreVanGogh = document.querySelector('[data-nombreFallecidoVanGogh]');
-
+const imgVanGogh = document.querySelector("[data-imgFallecidoVanGogh]");
+const nombreVanGogh = document.querySelector("[data-nombreFallecidoVanGogh]");
 
 // body.addEventListener('mousemove', () => {
 //     iconConfig.classList.remove('inactive');
@@ -84,3 +83,17 @@ const nombreVanGogh = document.querySelector('[data-nombreFallecidoVanGogh]');
 //     infoExtra.style.color = 'var(--col-white)';
 //     fraseHomenaje.style.color = 'var(--col-white)';
 // })
+
+// FRASES ENVIADAS
+
+const frases = ['Hola', 'Chau', 'adios', 'hasta pronto', 'hasta mañana', ' buenos dias'];
+const q = frases.length;
+const fraseAleatoria = Math.round(Math.random() * (q - 1));
+
+function mostrarFrase() {
+  console.log(frases[fraseAleatoria]);
+  console.log(frases[fraseAleatoria]);
+  console.log(frases[fraseAleatoria]);
+}
+
+mostrarFrase();
