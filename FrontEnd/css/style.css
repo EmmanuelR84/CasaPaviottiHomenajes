@@ -120,10 +120,40 @@ hr {
   margin-bottom: 2rem;
 }
 
+.contenedor__mensajes {
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* MOSTRANDO MENSAJES */
+.contenedor__contenedor--frase {
+  overflow: hidden;
+  height: auto;
+}
+
+/* .contenedor__mensajes {
+  animation-duration: 30s;
+  animation-name: slidein;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+}
+
+@keyframes slidein {
+  from {
+    margin-top: 100%;
+  }
+  to {
+    margin-top: calc(-170%);
+  }
+} */
+/* MOSTRANDO MSJ FIN */
+
 .infoExtra {
-  display: inline;
-  margin-bottom: 2rem;
-  width: 60%;
+  text-align: start;
+  margin-bottom: 3rem;
+  margin-left: 0.5rem;
+  width: 85%;
   padding: .7rem;
   border-radius: 15px;
   background: #e1dcdc;
@@ -136,7 +166,7 @@ hr {
   margin-top: -1em;
 }
 
-.contanedor__infoExtra {
+.contenedor__infoExtra {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
