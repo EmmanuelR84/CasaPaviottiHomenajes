@@ -130,6 +130,7 @@ hr {
 .contenedor__contenedor--frase {
   overflow: hidden;
   height: auto;
+  width: 100%;
 }
 
 /* .contenedor__mensajes {

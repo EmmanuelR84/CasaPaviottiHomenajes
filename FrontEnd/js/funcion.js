@@ -159,16 +159,26 @@ $(document).ready(function () {
                         // console.log(' Mensaje de '+ frase.nombre + ' ' + frase.apellido + ': ' + frase.mensaje);
 
                         // });
+
                         
-                        if (msjCondolencias.mensaje != null) {
-                          $("#contenedor__mensajes").html(`<p class="infoExtra">La muerte de un ser querido es siempre dolorosa, pero insluso esa tristeza da lugar a los momentos dedicados a recordar con una sonrisa a esa persona. Te deseo que muy pronto puedas hacerlo.</p>`);
-                        } else {
-                          for (let i = 0; i < msjCondolencias.length; i++) {
-                            const frase = msjCondolencias[i];
-                            console.log(`Mensaje de: ${frase.nombre} ${frase.apellido} ${frase.mensaje}`);
-                            $("#contenedor__mensajes").html(`<p class="infoExtra"><strong>${frase.mensaje} </strong><br> ${frase.nombre} ${frase.apellido}</p>`);
-                          }
+                        var contador = 0;
+                        let frase = msjCondolencias[contador];
+                        console.log(msjCondolencias);
+                        while (contador <= msjCondolencias.length)
+                        {
+                          $("#contenedor__mensajes").html(`<p class="infoExtra"><strong>${frase.mensaje} </strong><br> ${frase.nombre} ${frase.apellido}</p>`);
+                            contador++;
                         }
+                        
+                        // if (msjCondolencias.mensaje != null) {
+                        //   $("#contenedor__mensajes").html(`<p class="infoExtra">La muerte de un ser querido es siempre dolorosa, pero insluso esa tristeza da lugar a los momentos dedicados a recordar con una sonrisa a esa persona. Te deseo que muy pronto puedas hacerlo.</p>`);
+                        // } else {
+                        //   for (let i = 0; i < msjCondolencias.length; i++) {
+                        //     const frase = msjCondolencias[i];
+                        //     console.log(`Mensaje de: ${frase.nombre} ${frase.apellido} ${frase.mensaje}`);
+                        //     $("#contenedor__mensajes").html(`<p class="infoExtra"><strong>${frase.mensaje} </strong><br> ${frase.nombre} ${frase.apellido}</p>`);
+                        //   }
+                        // }
                         
                     }
                     
