@@ -15,7 +15,7 @@ $opcion = (isset($_POST['opcion'])) ? $_POST['opcion'] : '';
 $hash = (isset($_POST['hash'])) ? $_POST['hash'] : '';
 
 /////// convierto $hash all verdadero codigo
-$cod = substr($hash,3);
+$cod = substr($hash,0,-2);
 
 $img = 'No se ha seleccionado ninguna imagen';
 switch ($opcion) {

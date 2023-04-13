@@ -51,7 +51,7 @@ section {
     justify-content: space-evenly;
     width: 100vw;
     height: 67vh;
-    background-color: var(--third-col);
+    background-color: var(--col-white);
 }
 
 .contenedor__salaVelatoria {

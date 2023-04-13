@@ -27,21 +27,21 @@ const nombrePicasso = document.querySelector("[data-nombreFallecidoPicasso]");
 const imgVanGogh = document.querySelector("[data-imgFallecidoVanGogh]");
 const nombreVanGogh = document.querySelector("[data-nombreFallecidoVanGogh]");
 
-// body.addEventListener('mousemove', () => {
-//     iconConfig.classList.remove('inactive');
-// })
+body.addEventListener('mousemove', () => {
+    iconConfig.classList.remove('inactive');
+})
 
-// function ocultar(){
-//     iconConfig.classList.add('inactive');
-// }
-// setInterval(ocultar, 4000);
+function ocultar(){
+    iconConfig.classList.add('inactive');
+}
+setInterval(ocultar, 4000);
 
-// iconConfig.addEventListener('click', () => {
-//     divEstilos.classList.remove('inactive');
-// })
-// estilos.addEventListener('click', () => {
-//     divEstilos.classList.add('inactive');
-// })
+iconConfig.addEventListener('click', () => {
+    divEstilos.classList.remove('inactive');
+})
+estilos.addEventListener('click', () => {
+    divEstilos.classList.add('inactive');
+})
 
 // ESTILOS
 

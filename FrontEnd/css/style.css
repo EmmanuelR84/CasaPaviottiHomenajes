@@ -228,10 +228,17 @@ hr {
 }
 
 .iconReligion {
-  width: 32px;
+  min-width: 36px;
+  max-width: 36px;
+  min-height: 36px;
+  max-height: 36px;
+  text-align: center;
+  line-height: 2rem;
+  font-size: 2rem;
+  font-weight: bold;
   position: absolute;
   left: 28%;
-  padding: .3rem;
+  padding: .5rem;
   border-radius: 49%;
   background-color: #cccccc;
   box-shadow: 2px 2px 15px 5px var(--col-grey);

@@ -49,7 +49,7 @@ $apellido =  ValidarHash($hash,$cod);
         <input type="text"  id="nombre" placeholder="Tu Nombre" autocomplete="off" required />
         <input type="text"  id="apellido" placeholder="Tu Apellido" autocomplete="off" required />
         <input type="text"  id="tel" placeholder="Numero Tel" autocomplete="off" required />
-        <input type="text"  id="hash" value="<?php echo $hash?>" autocomplete="off" hidden />
+        <input type="text"  id="hash" value="<?php echo $hash?>" autocomplete="off"  hidden/>
         <input type="mail"  id="mail" placeholder="E-Mail" autocomplete="off" />
         <textarea rows="" cols="" id="frase" placeholder="Su Condolencia" autocomplete="off" required></textarea>
           
