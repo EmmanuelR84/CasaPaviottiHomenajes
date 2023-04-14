@@ -106,3 +106,29 @@ function escribirFrase(data, num) {
 
   
 $("#comentario").html('<b>' + frase.mensaje + '</b> <br>' + frase.apellido + ' ' + frase.nombre );
+
+
+var numbers = ['00','01','02','03','04','05','06','07','08','09','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40','41','42','43','44','45','46','47','48','49','50','51','52','53','54','55','56','57','58','59'];
+
+const randomNumbers = []
+
+const NUMBERS_LENGTH = numbers.length
+
+// agregando aleatorios a randomNumbers
+while(randomNumbers.length < 6) {
+  const randomIndex = getRandom()
+  if (!checkNotRepeat(numbers[randomIndex], randomNumbers))
+    randomNumbers.push(numbers[randomIndex])
+}
+
+// obteniendo aleatorios en rango
+function getRandom() {
+  return Math.floor(Math.random() * NUMBERS_LENGTH)
+}
+
+// checkeando por no repetidos
+function checkNotRepeat(current, validNumbers) {
+  return validNumbers.includes(current)
+}
+
+console.log(randomNumbers)

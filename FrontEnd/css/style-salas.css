@@ -59,7 +59,7 @@ section {
     justify-content: space-between;
     align-items: center;
     min-width: 81vw;
-    height: 4rem;
+    height: 6rem;
     font-size: .6em;
     border-radius: 17px;
     background: var(--first-col);
@@ -92,7 +92,7 @@ section {
     align-items: center;
     justify-content: center;
     text-align: center;
-    width: 10.5rem;
+    width: 15.5rem;
     height: 4.5rem;
     background: #b3c6db;
     border-radius: 15%;

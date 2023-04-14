@@ -32,6 +32,31 @@ main {
   position: relative;
 }
 
+.btn-recargar {
+  width: 6rem;
+  height: 5rem;
+  position: absolute;
+  margin-left: 1rem;
+  margin-top: -1.5rem;
+  border-radius: 30%;
+  text-align: center;
+  line-height: 5rem;
+  color: transparent;
+}
+
+.btn-recargar:hover {
+  background-color: var(--col-black);
+  border: 2px solid var(--col-white);
+  transition: 1s;
+  color: var(--col-white);
+  font-size: var(--md);
+  cursor: pointer;
+}
+
+#btn-recargarSalas{
+  margin-top: 1.5rem;
+}
+
 .contenedor {
   display: flex;
   flex-direction: row;
@@ -99,6 +124,12 @@ hr {
 #lInhumacion,
 #fInhumacion {
   font-size: var(--sm);
+}
+
+.fSala {
+  margin: 1rem;
+  font-size: var(--md);
+  font-weight: bold;
 }
 
 .contenedor__frase {

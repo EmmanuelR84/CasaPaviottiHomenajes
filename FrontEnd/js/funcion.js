@@ -82,6 +82,9 @@ $(document).ready(function () {
         const fInhuFechaHora = document.querySelector("[data-inhumacionFH]");
         fInhuFechaHora.innerHTML = `<b>${dato[num].fechasep}</b>` + " a las " + `<b>${dato[num].horasep}</b>`;
   
+        const fSala = document.querySelector("[data-fSala]");
+        fSala.innerHTML = `<b>${dato[num].sala}</b>`;
+  
         const contenedorInfoExtra = document.querySelector(".contenedor__infoExtra");
         const codigoQR = document.querySelector("[data-qr]");
         const fraseHomenaje = document.querySelector("#fraseHomenaje");
@@ -115,7 +118,7 @@ $(document).ready(function () {
           setTimeout(()=> {
               $("#screen1").hide();
               $("#screen0").show();
-          },10000)
+          },12000)
       }
     ///////////// CONSULTA BASE DE DATOS DE PAVIOTTI/////////////////
   
@@ -191,8 +194,28 @@ $(document).ready(function () {
                     comentario.innerHTML += `<p class="infoExtra"><strong>${msjCondolencias[i].mensaje} </strong><br> ${msjCondolencias[i].nombre} ${msjCondolencias[i].apellido}</p>`;
 
                     //COLOCAR MSJ AL AZAR
-                    // let c = Math.floor(Math.random()*comentario.length);
-                    // document.getElementById("contenedor__mensajes").innerHTML += `<p>${comentario[c].mensaje}</p>` + `<p>${comentario[c].mensaje}</p>` + `<p>${comentario[c].mensaje}</p>`;
+                    // const randomNumbers = [];
+
+                    // const NUMBERS_LENGTH = numbers.length;
+
+                    // // agregando aleatorios a randomNumbers
+                    // while(randomNumbers.length < 3) {
+                    //   const randomIndex = getRandom();
+                    //   if (!checkNotRepeat(numbers[randomIndex], randomNumbers))
+                    //     randomNumbers.push(numbers[randomIndex]);
+                    // }
+
+                    // // obteniendo aleatorios en rango
+                    // function getRandom() {
+                    //   return Math.floor(Math.random() * NUMBERS_LENGTH)
+                    // }
+
+                    // // checkeando por no repetidos
+                    // function checkNotRepeat(current, validNumbers) {
+                    //   return validNumbers.includes(current)
+                    // }
+
+                    // console.log(randomNumbers)
 
             }
       }
@@ -205,9 +228,24 @@ $(document).ready(function () {
       }
 
           //////////// RECARGAR PAGINA
-          fullscreen.addEventListener('click', () => {
-            window.location.reload();
+          
+      let btnRecargar =  document.querySelector('[data-recargar]');
+
+      btnRecargar.addEventListener('click', () => {
+        window.location.reload();
+      })
+      
+      
+      ////////// funcion  full screen
+        document.addEventListener("dblclick", ()=> {
+          document.documentElement.requestFullscreen().catch((e) => {
+                console.log(e);
+              })
         })
+    
+
+
+      
   
       setInterval(ajax, 600000); ////Llamo Ajax Cada 10 Min
       ajax(); ////LLamo a Ajax por Primera Vez

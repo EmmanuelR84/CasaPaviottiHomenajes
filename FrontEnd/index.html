@@ -16,7 +16,8 @@
     <title>Homenaje Casa Paviotti</title>
   </head>
   <body id="fullscreen">
-    <main class="screenFull">
+    <main>
+      <div class="btn-recargar" data-recargar>Reload</div>
       <div class="screenHomenaje" id="screen0" data-changeScreen1>
         <div class="contenedor">
           <div class="contenedor__fallecido">
@@ -38,6 +39,7 @@
               <p id="fInhumacion" data-inhumacionFH>
                 21/03/2023 a las 17:00 hs.
               </p>
+              <p class="fSala" data-fSala></p>
             </div>
 
             <div class="contenedor__infoExtra">
@@ -74,8 +76,9 @@
       </div>
 
       <div class="screenSala inactive" id="screen1" data-changeScreen2>
+        <div class="btn-recargar" id="btn-recargarSalas" data-recargar>Reload</div>
         <section>
-          <div class="contenedor__saludo">HOY HOMENAJEAMOS A</div>
+          <div class="contenedor__saludo">HOMENAJES DEL DIA</div>
           <div class="contenedor__salas">
             <div class="contenedor__salaVelatoria">
               <img
