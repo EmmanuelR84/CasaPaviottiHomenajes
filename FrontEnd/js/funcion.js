@@ -192,35 +192,33 @@ $(document).ready(function () {
             let msjCondolencias = JSON.parse(condolencia);
             let numeroResta = NumComentarios - 1;
 
-            if( NumComentarios <= 3) {
-              comentario.innerHTML += `<p class="infoExtra"><strong>${msjCondolencias[0].mensaje} </strong><br> ${msjCondolencias[0].nombre} ${msjCondolencias[0].apellido}</p>`;
+              if( NumComentarios <= 3) {
+                comentario.innerHTML += `<p class="infoExtra"><strong>${msjCondolencias[0].mensaje} </strong><br> ${msjCondolencias[0].nombre} ${msjCondolencias[0].apellido}</p>`;
 
-                    comentario.innerHTML += `<p class="infoExtra"><strong>${msjCondolencias[1].mensaje} </strong><br> ${msjCondolencias[1].nombre} ${msjCondolencias[1].apellido}</p>`;
+                      comentario.innerHTML += `<p class="infoExtra"><strong>${msjCondolencias[1].mensaje} </strong><br> ${msjCondolencias[1].nombre} ${msjCondolencias[1].apellido}</p>`;
 
-                    comentario.innerHTML += `<p class="infoExtra"><strong>${msjCondolencias[2].mensaje} </strong><br> ${msjCondolencias[2].nombre} ${msjCondolencias[2].apellido}</p>`;
-                    console.warm(NumComentarios);
-            } else {
+                      comentario.innerHTML += `<p class="infoExtra"><strong>${msjCondolencias[2].mensaje} </strong><br> ${msjCondolencias[2].nombre} ${msjCondolencias[2].apellido}</p>`;
+                      console.warm(NumComentarios);
+              } else {
 
-            let num = getRandomIntInclusive(0, numeroResta);
-            let num2 = getRandomIntInclusive(0, numeroResta);
-            let num3 = getRandomIntInclusive(0, numeroResta);
+              let num = getRandomIntInclusive(0, numeroResta);
+              let num2 = getRandomIntInclusive(0, numeroResta);
+              let num3 = getRandomIntInclusive(0, numeroResta);
 
-            if(num == num2 || num == num3 || num2 == num3) {
-              return getRandomIntInclusive(0, numeroResta);
-            }
+              if(num === num2 || num === num3 || num2 === num3) {
+                return getRandomIntInclusive(0, numeroResta);
+              }
 
-            console.warn(num);
-            console.warn(num2);
-            console.warn(num3);
+              console.warn(num);
+              console.warn(num2);
+              console.warn(num3);
 
-                    comentario.innerHTML += `<p class="infoExtra"><strong>${msjCondolencias[num].mensaje} </strong><br> ${msjCondolencias[num].nombre} ${msjCondolencias[num].apellido}</p>`;
+                      comentario.innerHTML += `<p class="infoExtra"><strong>${msjCondolencias[num].mensaje} </strong><br> ${msjCondolencias[num].nombre} ${msjCondolencias[num].apellido}</p>`;
 
-                    comentario.innerHTML += `<p class="infoExtra"><strong>${msjCondolencias[num2].mensaje} </strong><br> ${msjCondolencias[num2].nombre} ${msjCondolencias[num2].apellido}</p>`;
+                      comentario.innerHTML += `<p class="infoExtra"><strong>${msjCondolencias[num2].mensaje} </strong><br> ${msjCondolencias[num2].nombre} ${msjCondolencias[num2].apellido}</p>`;
 
-                    comentario.innerHTML += `<p class="infoExtra"><strong>${msjCondolencias[num3].mensaje} </strong><br> ${msjCondolencias[num3].nombre} ${msjCondolencias[num3].apellido}</p>`;
-            }
-
-            
+                      comentario.innerHTML += `<p class="infoExtra"><strong>${msjCondolencias[num3].mensaje} </strong><br> ${msjCondolencias[num3].nombre} ${msjCondolencias[num3].apellido}</p>`;
+              }
             }
 
       function getRandomIntInclusive(min, max) {
