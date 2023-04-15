@@ -189,36 +189,46 @@ $(document).ready(function () {
       function mostrarCondolencia(condolencia , NumComentarios){
             let comentario = document.querySelector('[data-comentario]');
             comentario.innerHTML = '';
-            let msjCondolencias = JSON.parse(condolencia); 
-            for (let i = 0; i < NumComentarios; i++){
-                    comentario.innerHTML += `<p class="infoExtra"><strong>${msjCondolencias[i].mensaje} </strong><br> ${msjCondolencias[i].nombre} ${msjCondolencias[i].apellido}</p>`;
+            let msjCondolencias = JSON.parse(condolencia);
+            let numeroResta = NumComentarios - 1;
 
-                    //COLOCAR MSJ AL AZAR
-                    // const randomNumbers = [];
+            if( NumComentarios <= 3) {
+              comentario.innerHTML += `<p class="infoExtra"><strong>${msjCondolencias[0].mensaje} </strong><br> ${msjCondolencias[0].nombre} ${msjCondolencias[0].apellido}</p>`;
 
-                    // const NUMBERS_LENGTH = numbers.length;
+                    comentario.innerHTML += `<p class="infoExtra"><strong>${msjCondolencias[1].mensaje} </strong><br> ${msjCondolencias[1].nombre} ${msjCondolencias[1].apellido}</p>`;
 
-                    // // agregando aleatorios a randomNumbers
-                    // while(randomNumbers.length < 3) {
-                    //   const randomIndex = getRandom();
-                    //   if (!checkNotRepeat(numbers[randomIndex], randomNumbers))
-                    //     randomNumbers.push(numbers[randomIndex]);
-                    // }
+                    comentario.innerHTML += `<p class="infoExtra"><strong>${msjCondolencias[2].mensaje} </strong><br> ${msjCondolencias[2].nombre} ${msjCondolencias[2].apellido}</p>`;
+                    console.warm(NumComentarios);
+            } else {
 
-                    // // obteniendo aleatorios en rango
-                    // function getRandom() {
-                    //   return Math.floor(Math.random() * NUMBERS_LENGTH)
-                    // }
+            let num = getRandomIntInclusive(0, numeroResta);
+            let num2 = getRandomIntInclusive(0, numeroResta);
+            let num3 = getRandomIntInclusive(0, numeroResta);
 
-                    // // checkeando por no repetidos
-                    // function checkNotRepeat(current, validNumbers) {
-                    //   return validNumbers.includes(current)
-                    // }
-
-                    // console.log(randomNumbers)
-
+            if(num == num2 || num == num3 || num2 == num3) {
+              return getRandomIntInclusive(0, numeroResta);
             }
+
+            console.warn(num);
+            console.warn(num2);
+            console.warn(num3);
+
+                    comentario.innerHTML += `<p class="infoExtra"><strong>${msjCondolencias[num].mensaje} </strong><br> ${msjCondolencias[num].nombre} ${msjCondolencias[num].apellido}</p>`;
+
+                    comentario.innerHTML += `<p class="infoExtra"><strong>${msjCondolencias[num2].mensaje} </strong><br> ${msjCondolencias[num2].nombre} ${msjCondolencias[num2].apellido}</p>`;
+
+                    comentario.innerHTML += `<p class="infoExtra"><strong>${msjCondolencias[num3].mensaje} </strong><br> ${msjCondolencias[num3].nombre} ${msjCondolencias[num3].apellido}</p>`;
+            }
+
+            
+            }
+
+      function getRandomIntInclusive(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min + 1) + min);
       }
+      
 
     /////////////////Funcion que Genera El codigo QR (recibe el ID del Inhumado)
       function generarQR(id) {
