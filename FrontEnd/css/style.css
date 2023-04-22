@@ -9,9 +9,10 @@
 }
 
 body {
-  background-image: url(../img/img6.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
+  /* background-image: url(../img/img6.jpg); */
+  /* background-repeat: no-repeat;
+  background-size: cover; */
+  overflow: hidden;
 }
 
 :root {
@@ -164,21 +165,28 @@ hr {
   width: 100%;
 }
 
-/* .contenedor__mensajes {
-  animation-duration: 30s;
-  animation-name: slidein;
+.imgFondo {
+  position: absolute;
+  top: 0;
+  width: 300%;
+  animation-duration: 60s;
+  animation-name: fondo;
   animation-iteration-count: infinite;
-  animation-timing-function: ease;
+  animation-timing-function: linear;
+  animation-direction: alternate;
 }
 
-@keyframes slidein {
+@keyframes fondo {
   from {
-    margin-top: 100%;
+    margin-left: 0%;
+    width: 300%
   }
+
   to {
-    margin-top: calc(-170%);
+    margin-left: 0%;
+    width: 105%;
   }
-} */
+}
 /* MOSTRANDO MSJ FIN */
 
 .infoExtra {
