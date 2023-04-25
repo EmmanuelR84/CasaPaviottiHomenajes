@@ -33,10 +33,12 @@ section {
     align-items: center;
     width: 72vw;
     height: 5.5rem;
-    color: var(--col-black);
-    font-size: 2em;
+    color: var(--col-white);
+    -webkit-text-stroke: 2px black;
+    font-size: 3em;
     font-weight: bold;
-    letter-spacing: 1em;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: .5em;
     border-radius: 15px;
     background: var(--first-col);
     box-shadow:  -11px -11px 22px #788593, 11px 11px 22px #eeffff;
@@ -83,8 +85,11 @@ section {
 }
 
 .nombreFallecido {
-    font-size: var(--lg);
+    font-size: 4em;
     font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    color: var(--col-white);
+    -webkit-text-stroke: 2px black;
 }
 
 .contenedor__sala {
@@ -94,9 +99,9 @@ section {
     text-align: center;
     width: 15.5rem;
     height: 4.5rem;
-    background: #b3c6db;
+    background: #f1f4f7;
     border-radius: 15%;
-    box-shadow: inset 9.91px 9.91px 15px #C6DBF2, inset -9.91px -9.91px 15px #A0B1C4;
+    box-shadow: inset 9.91px 9.91px 15px #deebf8, inset -9.91px -9.91px 15px #A0B1C4;
 }
 
 .salaVelatoria0 {
